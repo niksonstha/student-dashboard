@@ -1,0 +1,64 @@
+{
+    "students": [
+        {
+            "name": "John Doe",
+            "age": 18,
+            "grade": 12,
+            "major": "Science"
+        },
+        {
+            "name": "Jane Smith",
+            "age": 17,
+            "grade": 11,
+            "major": "Mathematics"
+        },
+        {
+            "name": "Robert Johnson",
+            "age": 18,
+            "grade": 12,
+            "major": "History"
+        },
+        {
+            "name": "Emily Davis",
+            "age": 17,
+            "grade": 11,
+            "major": "English"
+        },
+        {
+            "name": "Michael Brown",
+            "age": 16,
+            "grade": 10,
+            "major": "Computer Science"
+        },
+        {
+            "name": "Samantha Miller",
+            "age": 17,
+            "grade": 11,
+            "major": "Art"
+        },
+        {
+            "name": "Daniel White",
+            "age": 16,
+            "grade": 10,
+            "major": "Physics"
+        },
+        {
+            "name": "Olivia Taylor",
+            "age": 18,
+            "grade": 12,
+            "major": "Chemistry"
+        },
+        {
+            "name": "William Anderson",
+            "age": 16,
+            "grade": 10,
+            "major": "Biology"
+        },
+        {
+            "name": "Ava Thomas",
+            "age": 17,
+            "grade": 11,
+            "major": "Economics"
+        }
+    ]
+}

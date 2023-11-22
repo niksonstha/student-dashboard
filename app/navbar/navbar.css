@@ -1,0 +1,40 @@
+.navbar {
+  width: 15%;
+  background-color: #ed7d31;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+}
+.navbar > i {
+  margin-left: 20px;
+  font-size: 2rem;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.navbar i.fa-solid {
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.navbar > ul {
+  margin-left: 20px;
+  margin-top: 3rem;
+}
+.navbar > ul > li {
+  margin-bottom: 20px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.navbar > ul > li > a {
+  color: black;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background-color: #f6f1ee;
+  line-height: 50px;
+  padding: 15px;
+  border-radius: 20px;
+}

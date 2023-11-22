@@ -1,0 +1,20 @@
+<nav class="navbar" ng-style="{width: $ctrl.navbarWidth}">
+  <i
+    ng-if="!$ctrl.showBars"
+    class="fa-solid fa-xmark"
+    ng-click="$ctrl.toggleWidth()"
+  ></i>
+  <i
+    ng-if="$ctrl.showBars"
+    class="fa-solid fa-bars"
+    ng-click="$ctrl.toggleWidth()"
+  ></i>
+  <ul>
+    <li ng-if="$ctrl.showIcons"><i class="fa-solid fa-chart-pie fa-2x"></i></li>
+    <li ng-if="$ctrl.showIcons"><i class="fa-solid fa-list fa-2x"></i></li>
+    <li ng-if="$ctrl.showIcons"><i class="fa-solid fa-user fa-2x"></i></li>
+    <li ng-if="!$ctrl.showIcons"><a href="#">Dashboard</a></li>
+    <li ng-if="!$ctrl.showIcons"><a href="#">Category</a></li>
+    <li ng-if="!$ctrl.showIcons"><a href="#">Student Details</a></li>
+  </ul>
+</nav>
