@@ -10,3 +10,12 @@
 :root {
   background-color: #4f4a45;
 }
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.main {
+  margin-left: -75%;
+}

@@ -1,14 +1,26 @@
-<div>
-  <!-- if you are binding some variable to the html you can either use $ctrl which represents the controller binded to the html using templateUrl or template in the component intialization -->
-  <h1>{{$ctrl.name}}</h1>
-  <!-- you can also give special alias to controllers in the component using controllerAs: nikson 
-    angular.module('myApp').component('studentList', {
-      templateUrl: "student-list/student-list.template.html",
-      controllerAs: "$nikson",
-      controller: function () {
-        this.name = "Nikson Shrestha"
-      }
-    });
-  which would've allowed you do to something like {{$nikson.name}} in the above html, by convention we append $ symbol to represent controller
-  -->
+<div class="hero">
+  <h1>Student List</h1>
+  <table style="width: 100%">
+    <thead>
+      <tr>
+        <th scope="col">SN</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Grade</th>
+        <th scope="col">Major</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="student in $ctrl.students track by $index">
+        <th scope="row">{{$index + 1}}</th>
+        <td>{{student.name}}</td>
+        <td>{{student.age}}</td>
+        <td>{{student.grade}}</td>
+        <td>{{student.major}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+
+<!-- <div ui-grid="data:$ctrl.students" class="uiGrid"></div> -->
+<!-- <div ui-grid="{ data: $ctrl.myData }" class="uiGrid"></div> -->
