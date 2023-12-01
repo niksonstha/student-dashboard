@@ -9,8 +9,10 @@
 
     <!-- Load other styles and scripts -->
     <link rel="styleSheet" href="lib/angular-ui-grid/ui-grid.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-ui-grid/ui-grid.min.js"></script>
+
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
 
     <!-- Add other stylesheet links as needed -->
     <link rel="stylesheet" href="app.css" />
@@ -31,7 +33,7 @@
     <div class="container">
       <navbar style="width: 100%"></navbar>
       <div class="main">
-        <student-list></student-list>
+        <div ui-view><student-list></student-list></div>
       </div>
     </div>
   </body>

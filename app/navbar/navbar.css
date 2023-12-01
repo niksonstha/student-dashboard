@@ -38,3 +38,8 @@
   padding: 15px;
   border-radius: 20px;
 }
+
+.active {
+  color: red;
+  font-weight: bolder;
+}

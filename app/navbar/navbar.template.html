@@ -11,10 +11,20 @@
   ></i>
   <ul>
     <li ng-if="$ctrl.showIcons"><i class="fa-solid fa-chart-pie fa-2x"></i></li>
-    <li ng-if="$ctrl.showIcons"><i class="fa-solid fa-list fa-2x"></i></li>
-    <li ng-if="$ctrl.showIcons"><i class="fa-solid fa-user fa-2x"></i></li>
-    <li ng-if="!$ctrl.showIcons"><a href="#">Dashboard</a></li>
-    <li ng-if="!$ctrl.showIcons"><a href="#">Category</a></li>
-    <li ng-if="!$ctrl.showIcons"><a href="#">Student Details</a></li>
+    <li ng-if="$ctrl.showIcons">
+      <i class="fa-solid fa-list fa-2x" ui-sref="category"></i>
+    </li>
+    <li ng-if="$ctrl.showIcons">
+      <i class="fa-solid fa-user fa-2x" ui-sref="studentDetail"></i>
+    </li>
+    <li ng-if="!$ctrl.showIcons">
+      <a href="#" ui-sref-active="active">Dashboard</a>
+    </li>
+    <li ng-if="!$ctrl.showIcons">
+      <a href="#!/category" ui-sref="category">Category</a>
+    </li>
+    <li ng-if="!$ctrl.showIcons">
+      <a ui-sref="studentDetail" ui-sref-active="active">Student Details</a>
+    </li>
   </ul>
 </nav>

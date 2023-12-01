@@ -4,19 +4,7 @@ angular.module("myApp").component("studentList", {
     var self = this;
     $http.get("students/student.json").then(function (response) {
       if (response.data) {
-        self.students = response.data;
-        console.log(self.students);
-
-        self.gridOptions = {
-          enableSorting: true,
-          columnDefs: [
-            { field: "Name", displayName: "Name" },
-            { field: "age", displayName: "Age" },
-            { field: "Grade", displayName: "Grade" },
-            { field: "Major", displayName: "Major" },
-          ],
-          data: self.students,
-        };
+        self.myData = response.data;
       } else {
         console.error("No data found in the response.");
       }
