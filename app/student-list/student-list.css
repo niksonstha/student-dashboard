@@ -5,11 +5,13 @@
 h2 {
   color: #f6f1ee;
   letter-spacing: 4px;
+  font-size: xx-large;
+  font-variant-caps: small-caps;
 }
 
 .myGrid {
   margin-top: 10px;
-  width: 700px;
+  width: 1500px;
   height: max-content;
   color: black;
   background-color: #f6f1ee;
