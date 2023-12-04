@@ -3,7 +3,7 @@ myApp.config(function ($stateProvider) {
   var studentsDetailState = {
     name: "studentDetail",
     url: "/studentDetail",
-    template: "<h1>I am detail page</h1>",
+    component: "studentDetail",
   };
 
   $stateProvider.state(studentsDetailState);
