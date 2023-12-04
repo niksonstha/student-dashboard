@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="navbar/navbar.css" />
     <link rel="stylesheet" href="student-list/student-list.css" />
+    <link rel="stylesheet" href="studentDetails/studentDetail.css" />
     <script
       src="https://kit.fontawesome.com/f93fb3145a.js"
       crossorigin="anonymous"
@@ -26,6 +27,7 @@
     <script src="app.module.js"></script>
     <script src="navbar/navbar.component.js"></script>
     <script src="student-list/student-list.component.js"></script>
+    <script src="studentDetails/studentDetail.component.js"></script>
   </head>
 
   <!-- Rest of your HTML code -->
@@ -33,7 +35,9 @@
     <div class="container">
       <navbar style="width: 100%"></navbar>
       <div class="main">
-        <div ui-view><student-list></student-list></div>
+        <div ui-view>
+          <student-list></student-list>
+        </div>
       </div>
     </div>
   </body>
