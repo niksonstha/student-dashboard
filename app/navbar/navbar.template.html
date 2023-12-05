@@ -10,13 +10,15 @@
     ng-click="$ctrl.toggleWidth()"
   ></i>
   <ul>
-    <li ng-if="$ctrl.showIcons"><i class="fa-solid fa-chart-pie fa-2x"></i></li>
+    <li ng-if="$ctrl.showIcons">
+      <i class="fa-solid fa-chart-pie fa-2x"></i>
+    </li>
     <li ng-if="$ctrl.showIcons">
       <i class="fa-solid fa-user fa-2x" ui-sref="studentDetail"></i>
     </li>
 
     <li ng-if="!$ctrl.showIcons">
-      <a href="#">Dashboard</a>
+      <a ui-sref="dashboard">Dashboard</a>
     </li>
 
     <li ng-if="!$ctrl.showIcons">

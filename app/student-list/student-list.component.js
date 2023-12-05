@@ -5,7 +5,6 @@ angular.module("myApp").component("studentList", {
     $http.get("students/student.json").then(function (response) {
       if (response.data) {
         self.myData = response.data;
-        console.log(self.myData);
       } else {
         console.error("No data found in the response.");
       }
