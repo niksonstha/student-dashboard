@@ -18,3 +18,16 @@ h2 {
   padding: 20px;
   border-radius: 10px;
 }
+.header-filtered {
+  color: #ed7d31;
+}
+
+@media screen and (max-width: 768px) {
+  .myGrid {
+    padding: 10px; /* Adjust padding for smaller screens */
+    font-size: small; /* Decrease font size for better readability */
+    border-radius: 0; /* Remove border-radius for a simpler look */
+    width: 300px;
+    font-size: 0.7rem;
+  }
+}

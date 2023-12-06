@@ -43,3 +43,17 @@
   color: red;
   font-weight: bolder;
 }
+
+/* responsive  */
+
+/* For screens smaller than 768px (standard tablets and below) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    background-color: #ed7d31;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+  }
+}

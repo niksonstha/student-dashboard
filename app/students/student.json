@@ -3,60 +3,70 @@
         "name": "John Doe",
         "age": 18,
         "grade": 12,
-        "major": "Science"
+        "major": "Science",
+        "gender": 1
     },
     {
         "name": "Jane Smith",
         "age": 17,
         "grade": 11,
-        "major": "Mathematics"
+        "major": "Mathematics",
+        "gender": 2
     },
     {
         "name": "Robert Johnson",
         "age": 18,
         "grade": 12,
-        "major": "History"
+        "major": "History",
+        "gender": 1
     },
     {
         "name": "Emily Davis",
         "age": 17,
         "grade": 11,
-        "major": "English"
+        "major": "English",
+        "gender": 2
     },
     {
         "name": "Michael Brown",
         "age": 16,
         "grade": 10,
-        "major": "Computer Science"
+        "major": "Computer Science",
+        "gender": 1
     },
     {
         "name": "Samantha Miller",
         "age": 17,
         "grade": 11,
-        "major": "Art"
+        "major": "Art",
+        "gender": 2
     },
     {
         "name": "Daniel White",
         "age": 16,
         "grade": 10,
-        "major": "Physics"
+        "major": "Physics",
+        "gender": 1
     },
     {
         "name": "Olivia Taylor",
         "age": 18,
         "grade": 12,
-        "major": "Chemistry"
+        "major": "Chemistry",
+        "gender": 2
     },
     {
         "name": "William Anderson",
         "age": 16,
         "grade": 10,
-        "major": "Biology"
+        "major": "Biology",
+        "gender": 1
     },
     {
         "name": "Ava Thomas",
         "age": 17,
         "grade": 11,
-        "major": "Economics"
+        "major": "Economics",
+        "gender": 2
     }
 ]

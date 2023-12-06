@@ -1,13 +1,75 @@
-angular.module("myApp").component("studentList", {
-  templateUrl: "student-list/student-list.template.html",
-  controller: function studentController($http) {
-    var self = this;
-    $http.get("students/student.json").then(function (response) {
-      if (response.data) {
-        self.myData = response.data;
-      } else {
-        console.error("No data found in the response.");
-      }
-    });
-  },
-});
+angular
+  .module("myApp")
+  .filter("mapGender", mapGender) // Register the filter
+  .component("studentList", {
+    templateUrl: "student-list/student-list.template.html",
+    controller: function studentController($http, uiGridConstants) {
+      var self = this;
+
+      self.highlightFilteredHeader = function (
+        row,
+        rowRenderIndex,
+        col,
+        colRenderIndex
+      ) {
+        if (col.filters[0].term) {
+          return "header-filtered";
+        } else {
+          return "";
+        }
+      };
+
+      // Initialize grid options
+      self.gridOptions = {
+        enableFiltering: true,
+        columnDefs: [
+          {
+            field: "name",
+            headerCellClass: self.highlightFilteredHeader,
+          },
+          { field: "age", headerCellClass: self.highlightFilteredHeader },
+          { field: "grade", headerCellClass: self.highlightFilteredHeader },
+          { field: "major", headerCellClass: self.highlightFilteredHeader },
+          {
+            field: "gender",
+            filter: {
+              type: uiGridConstants.filter.SELECT,
+              selectOptions: [
+                { value: "1", label: "male" },
+                { value: "2", label: "female" },
+              ],
+            },
+
+            cellFilter: "mapGender", // Use the mapGender filter
+            headerCellClass: self.highlightFilteredHeader,
+          },
+        ],
+        data: [], // Initialize with empty data
+      };
+
+      // Fetch data using $http
+      $http.get("students/student.json").then(function (response) {
+        if (response.data) {
+          self.gridOptions.data = response.data; // Assign data to the grid
+        } else {
+          console.error("No data found in the response.");
+        }
+      });
+    },
+  });
+
+// Define the mapGender filter function
+function mapGender() {
+  var genderHash = {
+    1: "male",
+    2: "female",
+  };
+
+  return function (input) {
+    if (!input) {
+      return "";
+    } else {
+      return genderHash[input];
+    }
+  };
+}
