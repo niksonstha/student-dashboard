@@ -10,7 +10,7 @@
         "name": "Jane Smith",
         "age": 17,
         "grade": 11,
-        "major": "Science",
+        "major": "English",
         "gender": 2
     },
     {
@@ -24,49 +24,49 @@
         "name": "Emily Davis",
         "age": 17,
         "grade": 11,
-        "major": "Science",
+        "major": "Physics",
         "gender": 2
     },
     {
         "name": "Michael Brown",
         "age": 16,
         "grade": 10,
-        "major": "Science",
+        "major": "Physics",
         "gender": 1
     },
     {
         "name": "Samantha Miller",
         "age": 17,
         "grade": 11,
-        "major": "Science",
+        "major": "English",
         "gender": 2
     },
     {
         "name": "Daniel White",
         "age": 16,
         "grade": 10,
-        "major": "Science",
+        "major": "Physics",
         "gender": 1
     },
     {
         "name": "Olivia Taylor",
         "age": 18,
         "grade": 12,
-        "major": "Science",
+        "major": "Physics",
         "gender": 2
     },
     {
         "name": "William Anderson",
         "age": 16,
         "grade": 10,
-        "major": "Science",
+        "major": "Computer Science",
         "gender": 1
     },
     {
-        "name": "Ava Thomas",
+        "name": "Avan Thomas",
         "age": 17,
         "grade": 11,
-        "major": "Science",
-        "gender": 2
+        "major": "Computer Science",
+        "gender": 1
     }
 ]

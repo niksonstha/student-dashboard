@@ -21,7 +21,9 @@ h2 {
 .header-filtered {
   color: #ed7d31;
 }
-
+.chart {
+  width: 20vw;
+}
 
 @media screen and (max-width: 768px) {
   .myGrid {

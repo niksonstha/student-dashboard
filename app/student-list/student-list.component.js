@@ -51,55 +51,61 @@ angular
       $http.get("students/student.json").then(function (response) {
         if (response.data) {
           self.gridOptions.data = response.data; // Assign data to the grid
+          var genderCounts = {
+            male: 0,
+            female: 0,
+          };
 
-          // Extracting major values from the response data
-          var majorLabels = response.data.map(function (student) {
-            return student.major;
-          });
-
-          // Generate sample data for the chart (number of students for each major)
-          var majorCount = {}; // Object to count occurrences of each major
           response.data.forEach(function (student) {
-            majorCount[student.major] = (majorCount[student.major] || 0) + 1;
-          });
-          console.log(majorCount);
-          var dataCounts = majorLabels.map(function (major) {
-            return majorCount[major] || 0;
+            if (student.gender === 1) {
+              genderCounts.male++;
+            } else if (student.gender === 2) {
+              genderCounts.female++;
+            }
           });
 
-          // Create a Chart.js chart after fetching data
-          var ctx = document.getElementById("myChart").getContext("2d");
-          var myChart = new Chart(ctx, {
-            type: "pie",
+          // Assuming you have a canvas element with id="genderChart" in your HTML
+
+          var ctx = document.getElementById("genderChart").getContext("2d");
+          var genderChart = new Chart(ctx, {
+            type: "bar",
             data: {
-              labels: majorLabels, // Use the extracted major values as labels
+              labels: ["Male", "Female"],
               datasets: [
                 {
-                  label: "Number of Students",
-                  data: dataCounts, // Use the generated data counts
-                  backgroundColor: "rgba(54, 162, 235, 0.2)",
-                  borderColor: "rgba(54, 162, 235, 1)",
+                  label: "Gender Distribution",
+                  data: [genderCounts.male, genderCounts.female],
+                  backgroundColor: [
+                    "rgba(54, 162, 235, 0.5)", // Color for male
+                    "rgba(255, 99, 132, 0.5)", // Color for female
+                  ],
+                  borderColor: [
+                    "rgba(54, 162, 235, 1)",
+                    "rgba(255, 99, 132, 1)",
+                  ],
                   borderWidth: 1,
                 },
               ],
             },
             options: {
-              // Chart.js options
               scales: {
                 y: {
                   beginAtZero: true,
                   title: {
                     display: true,
                     text: "Number of Students",
+                    color: "white",
                   },
                 },
                 x: {
                   title: {
                     display: true,
-                    text: "Majors",
+                    text: "Gender",
+                    color: "white",
                   },
                 },
               },
+              // Additional chart options can be set here
             },
           });
         } else {
