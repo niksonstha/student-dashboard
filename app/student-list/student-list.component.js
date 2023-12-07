@@ -51,6 +51,57 @@ angular
       $http.get("students/student.json").then(function (response) {
         if (response.data) {
           self.gridOptions.data = response.data; // Assign data to the grid
+
+          // Extracting major values from the response data
+          var majorLabels = response.data.map(function (student) {
+            return student.major;
+          });
+
+          // Generate sample data for the chart (number of students for each major)
+          var majorCount = {}; // Object to count occurrences of each major
+          response.data.forEach(function (student) {
+            majorCount[student.major] = (majorCount[student.major] || 0) + 1;
+          });
+          console.log(majorCount);
+          var dataCounts = majorLabels.map(function (major) {
+            return majorCount[major] || 0;
+          });
+
+          // Create a Chart.js chart after fetching data
+          var ctx = document.getElementById("myChart").getContext("2d");
+          var myChart = new Chart(ctx, {
+            type: "pie",
+            data: {
+              labels: majorLabels, // Use the extracted major values as labels
+              datasets: [
+                {
+                  label: "Number of Students",
+                  data: dataCounts, // Use the generated data counts
+                  backgroundColor: "rgba(54, 162, 235, 0.2)",
+                  borderColor: "rgba(54, 162, 235, 1)",
+                  borderWidth: 1,
+                },
+              ],
+            },
+            options: {
+              // Chart.js options
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: "Number of Students",
+                  },
+                },
+                x: {
+                  title: {
+                    display: true,
+                    text: "Majors",
+                  },
+                },
+              },
+            },
+          });
         } else {
           console.error("No data found in the response.");
         }

@@ -22,6 +22,7 @@ h2 {
   color: #ed7d31;
 }
 
+
 @media screen and (max-width: 768px) {
   .myGrid {
     padding: 10px; /* Adjust padding for smaller screens */
